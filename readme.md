@@ -1,3 +1,7 @@
+<div align="left">
+	<img src="./img/FashoTyped-logo.svg".svg"  alt="logo">
+</div>
+
 # FashoTyped.ts
 
 A collection of TypeScript resources I came across while learning or improving new-found knowledge
