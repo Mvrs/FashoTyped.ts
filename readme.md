@@ -15,6 +15,8 @@ I'll also share notes from Meetups i'll be attending or just watch old ones I mi
 - [Video Tutorials](#Video-Tutorials)
 - [Books](#Books)
 - [Meetups](#Meetups) `soon to be updated`
+- [Data Structure and Algorithms](#Data-Structure-and-Algorithms)
+- [About me](#About-me)
 
 ## Video Tutorials
 
@@ -27,6 +29,30 @@ These are books that I'm currently reading at the moment
 
 - [Programming TypeScript: Making Your JavaScript Applications Scale](https://www.amazon.com/Programming-TypeScript-Making-JavaScript-Applications/dp/1492037656/ref=sr_1_5?dchild=1&keywords=TypeScript&qid=1620835511&sr=8-5)
 - [Effective TypeScript: 62 Specific Ways to Improve Your TypeScript](https://www.amazon.com/Effective-TypeScript-Specific-Ways-Improve/dp/1492053740/ref=sr_1_7?dchild=1&keywords=TypeScript&qid=1620835511&sr=8-7)
+
+## Meetups
+
+> _These meetups are all virtual until further notice_
+
+### Going
+
+- [[Online] ReactJS Monthly Meetup](https://www.meetup.com/sandiegojs/events/lzptzrycchbqb/) `05/12/2021 6:30PM PST`
+
+  > _If it's non TypeScript meetup I will convert code/notes to TypeScript 🙃_
+
+  - Source code [here]() `will be available when meetup is over`
+
+- [DCJS[82] REMOTE-TypeScript at Slack-Natalie Qabazard](https://www.meetup.com/DC-JavaScript/events/276814452/) `05/13/2021 3:45 PST`
+
+  - Source code [here]() `will be available when meetup is over`
+
+- [SFNode Meetup](https://www.meetup.com/sfnode/events/hdgjmrycchbrb/)
+
+  - Source code [here]() `will be available when meetup is over`
+
+## Data Structure and Algorithms
+
+- [iruka](https://github.com/jeffzh4ng/iruka) by Jeff Zhang
 
 ## About Me
 
