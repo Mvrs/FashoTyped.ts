@@ -3,8 +3,8 @@ interface House {
   planets: string | string[];
 }
 
-interface HouseWithID {
-  id: string | number;
+interface HouseWithID extends House {
+  id: number;
 }
 
 const houses: House[] = [
@@ -25,15 +25,15 @@ function findHouses(
 ): HouseWithID[];
 
 function findHouses(
-  houses: unknown,
+  houses: string | House[],
   filter?: (house: House) => boolean,
 ): HouseWithID[] {
   if (typeof houses === "string") {
     houses = JSON.parse(houses);
   }
 
-  let houseWithId = [...(houses as House[])].map((house, idx) => ({
-    id: idx,
+  let houseWithId = [...(houses as House[])].map(house => ({
+    id: houses.indexOf(house as any),
     ...house,
   }));
 
@@ -45,8 +45,6 @@ function findHouses(
 
   return houseWithId;
 }
-
-console.log(findHouses(houses));
 
 console.log(
   findHouses(JSON.stringify(houses), ({ name }) => name === "Atreides"),
