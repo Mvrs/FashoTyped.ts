@@ -1,3 +1,17 @@
+## No BS TS #6 - Tuples in TypeScript
+
+You can find the souce of this video on [youtube](https://youtu.be/5q0VtzJjvNc)
+
+## [Log]
+
+- Tuples in TypeScript is an Array you can assign a fixed amount of elements `@length`
+- **Fun Fact!** React `useState` API is modeled after a Tuple Type
+- Easily access elements **@** index: `n[0], n[1], ... n[n]`
+- Find out more about tuples in TypeScript on [The Official TypeScipt documentation](https://www.typescriptlang.org/docs/handbook/2/objects.html#tuple-types)
+
+### Souce Code and Notes
+
+```javascript
 type ThreeDCoordinate = [x: number, y: number, z: number];
 
 function add3DCoordinate(
@@ -30,3 +44,4 @@ console.log(str1getter()); // hello
 str1setter("goodbye");
 console.log(str1getter()); // goodbye
 console.log(str2getter()); // marlon
+```
