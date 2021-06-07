@@ -1,52 +1,33 @@
-import { useCallback, useReducer } from "react";
-
-type ActionType =
-  | { type: "ADD"; text: string }
-  | { type: "REMOVE"; id: number };
-
+import create from "zustand";
 interface Todo {
   id: number;
   done: boolean;
   text: string;
 }
 
-export function useTodo(initialTodos: Todo[]): {
+const useTodos = create<{
   todos: Todo[];
   addTodo: (text: string) => void;
-  removeTodo: (id: number) => void;
-} {
-  // another way to store your data
-  const [todos, dispatch] = useReducer((state: Todo[], action: ActionType) => {
-    switch (action.type) {
-      case "ADD":
-        return [
-          ...state,
-          {
-            id: state.length,
-            text: action.text,
-            done: false,
-          },
-        ];
-      case "REMOVE":
-        return state.filter(({ id }) => id !== action.id);
-      default:
-        throw new Error();
-    }
-  }, initialTodos);
+  removeTodo: (removeId: number) => void;
+}>(set => ({
+  todos: [{ id: 0, text: "Hey there", done: false }],
+  addTodo: (text: string) =>
+    set(state => ({
+      ...state,
+      todos: [
+        ...state.todos,
+        {
+          id: state.todos.length,
+          text: text,
+          done: false,
+        },
+      ],
+    })),
+  removeTodo: (removeId: number) =>
+    set(state => ({
+      ...state,
+      todos: state.todos.filter(({ id }) => id !== removeId),
+    })),
+}));
 
-  const addTodo = useCallback((text: string) => {
-    dispatch({
-      type: "ADD",
-      text,
-    });
-  }, []);
-
-  const removeTodo = useCallback((id: number) => {
-    dispatch({
-      type: "REMOVE",
-      id,
-    });
-  }, []);
-
-  return { todos, addTodo, removeTodo };
-}
+export default useTodos;

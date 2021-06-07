@@ -1,5 +1,5 @@
 import React, { useCallback, useRef } from "react";
-import { useTodo } from "./useTodo";
+import useTodo from "./useTodo";
 import "./App.css";
 
 const Heading = ({ title }: { title: string }) => <h2>{title}</h2>;
@@ -61,9 +61,7 @@ function UL<T>({
 }
 
 function App() {
-  const { todos, addTodo, removeTodo } = useTodo([
-    { id: 0, text: "Hey there", done: false },
-  ]);
+  const { todos, addTodo, removeTodo } = useTodo(state => state);
 
   const newTodoRef = useRef<HTMLInputElement>(null);
 
@@ -105,4 +103,24 @@ function App() {
   );
 }
 
-export default App;
+const JustTheTodos = () => {
+  const todos = useTodo(state => state.todos);
+
+  return (
+    <UL items={todos} itemClick={() => {}} render={todo => <>{todo.text}</>} />
+  );
+};
+
+const AppWrapper = () => (
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "50% 50%",
+    }}
+  >
+    <App />
+    <JustTheTodos />
+  </div>
+);
+
+export default AppWrapper;
