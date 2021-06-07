@@ -60,10 +60,10 @@ function UL<T>({
   );
 }
 
+const initialTodos = [{ id: 0, text: "Hey there", done: false }];
+
 function App() {
-  const { todos, addTodo, removeTodo } = useTodo([
-    { id: 0, text: "Hey there", done: false },
-  ]);
+  const { todos, addTodo, removeTodo } = useTodo(initialTodos);
 
   const newTodoRef = useRef<HTMLInputElement>(null);
 
@@ -105,4 +105,23 @@ function App() {
   );
 }
 
-export default App;
+const JustTheTodos = () => {
+  const { todos } = useTodo(initialTodos);
+  return (
+    <UL items={todos} itemClick={() => {}} render={todo => <>{todo.text}</>} />
+  );
+};
+
+const AppWrapper = () => (
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "50% 50%",
+    }}
+  >
+    <App />
+    <JustTheTodos />
+  </div>
+);
+
+export default AppWrapper;
