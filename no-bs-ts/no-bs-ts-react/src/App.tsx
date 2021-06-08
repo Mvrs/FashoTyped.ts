@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from "react";
+import React, { useCallback, useRef, useMemo } from "react";
 import { useTodo } from "./useTodo";
 import "./App.css";
 
@@ -61,9 +61,12 @@ function UL<T>({
 }
 
 function App() {
-  const { todos, addTodo, removeTodo } = useTodo([
-    { id: 0, text: "Hey there", done: false },
-  ]);
+  const initialTodos = useMemo(
+    () => [{ id: 0, text: "Hey there", done: false }],
+    [],
+  );
+  const { isEditing, todos, addTodo, removeTodo, startWorking, endWorking } =
+    useTodo(initialTodos);
 
   const newTodoRef = useRef<HTMLInputElement>(null);
 
@@ -80,27 +83,34 @@ function App() {
       <Box>Hello there</Box>
 
       <Heading title="Todos" />
-      <UL
-        items={todos}
-        itemClick={item => alert(item.id)}
-        render={todo => (
-          <>
-            {todo.text}
-            <button onClick={() => removeTodo(todo.id)}>Remove</button>
-          </>
-        )}
-      />
+      {isEditing && (
+        <>
+          <UL
+            items={todos}
+            itemClick={item => alert(item.id)}
+            render={todo => (
+              <>
+                {todo.done ? "(Done)" : "(Not Done)"}
+                {todo.text}
+                <button onClick={() => removeTodo(todo.id)}>Remove</button>
+              </>
+            )}
+          />
 
-      {/* {todos.map(todo => (
+          {/* {todos.map(todo => (
         <div key={todo.id}>
           {todo.text}
           <button onClick={() => removeTodo(todo.id)}>Remove</button>
         </div>
       ))} */}
-      <div>
-        <input type="text" ref={newTodoRef} />
-        <Button onClick={onAddTodo}>Add Todo</Button>
-      </div>
+          <div>
+            <input type="text" ref={newTodoRef} />
+            <Button onClick={onAddTodo}>Add Todo</Button>
+          </div>
+          <Button onClick={startWorking}>Start Working</Button>
+        </>
+      )}
+      {!isEditing && <Button onClick={endWorking}>Stop Working</Button>}
     </div>
   );
 }
