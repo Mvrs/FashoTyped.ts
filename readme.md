@@ -20,8 +20,18 @@ I'll also share notes from Meetups i'll be attending or just watch old ones I mi
 
 ## Video Tutorials
 
+### TypeScript Fundamentals
+
 - [No-BS-TS by Jack Herrington](https://www.youtube.com/playlist?list=PLNqp92_EXZBJYFrpEzdO2EapvU0GOJ09n)
   - Source code [here]() `soon to be updated`
+
+### TypeScript + Modern Redux
+
+- [Learn React, Redux and Typescript in 2021 by CyberPotato](https://youtube.com/playlist?list=PLDrGjPCkkytsnmvgMPJBomOVx0XZ_gkCh)
+
+### TypeScript + NodeJs
+
+- [NodeJS with TypeScript by CyberPotato](https://youtube.com/playlist?list=PLDrGjPCkkyttKa1RX0bV7EZHstfrsg3xH)
 
 ## Books
 
@@ -49,6 +59,11 @@ These are books that I'm currently reading at the moment
 - [SFNode Meetup](https://www.meetup.com/sfnode/events/hdgjmrycchbrb/)
 
   - Source code [here]() `will be available when meetup is over`
+
+### Maybe
+
+- [IT Talk: «JS: Elm in Typescript & Apollo GraphQL»](https://www.eventbrite.com/e/it-talk-js-elm-in-typescript-apollo-graphql-tickets-155607025803?aff=ebdssbonlinesearch) `06/10/2021 8:30AM-10:30AM PST`
+- [Exploring Advanced TypeScript - Software Development](https://www.eventbrite.com/e/exploring-advanced-typescript-software-development-tickets-154717386869?aff=ebdssbonlinesearch) `06/15/2021 8:00AM-9:00AM PDT`
 
 ## Data Structure and Algorithms
 
