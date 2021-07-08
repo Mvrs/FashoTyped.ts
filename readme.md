@@ -15,6 +15,7 @@ I'll also share notes from Meetups i'll be attending or just watch old ones I mi
 - [Video Tutorials](#Video-Tutorials)
 - [Books](#Books)
 - [Meetups](#Meetups) `soon to be updated`
+- [Articles](#Articles)
 - [Data Structure and Algorithms](#Data-Structure-and-Algorithms)
 - [About me](#About-me)
 
@@ -64,6 +65,12 @@ These are books that I'm currently reading at the moment
 
 - [IT Talk: «JS: Elm in Typescript & Apollo GraphQL»](https://www.eventbrite.com/e/it-talk-js-elm-in-typescript-apollo-graphql-tickets-155607025803?aff=ebdssbonlinesearch) `06/10/2021 8:30AM-10:30AM PST`
 - [Exploring Advanced TypeScript - Software Development](https://www.eventbrite.com/e/exploring-advanced-typescript-software-development-tickets-154717386869?aff=ebdssbonlinesearch) `06/15/2021 8:00AM-9:00AM PDT`
+							    
+## Articles
+_These are all articles I've actually read that helped me in projects or better understand issues or concepts I run into_ 
+							     
+- `Next.js`
+  - [Using getStaticProps and getStaticPaths with TypeScript - Next.js](https://dev.to/jameswallis/using-getstaticprops-and-getstaticpaths-with-typescript-next-js-2d7e)
 
 ## Data Structure and Algorithms
 
