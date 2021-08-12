@@ -71,6 +71,10 @@ _These are all articles I've actually read that helped me in projects or better 
 							     
 - `Next.js`
   - [Using getStaticProps and getStaticPaths with TypeScript - Next.js](https://dev.to/jameswallis/using-getstaticprops-and-getstaticpaths-with-typescript-next-js-2d7e)
+							     
+- `TypeScript`
+  - [React Higher Order Components with TypeScript](https://isamatov.com/react-hoc-typescript/) by [Iskander Samatov](https://isamatov.com/) published `Aug 8, 2021`
+  - [6 new TypeScript features for writing clean code](https://itnext.io/6-new-typescript-features-for-writing-clean-code-ea7810cf5019) by [Iskander Samatov](https://isamatov.com/) published `Jul 30, 2021`
 
 ## Data Structure and Algorithms
 
